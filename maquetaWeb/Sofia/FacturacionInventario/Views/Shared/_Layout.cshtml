@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Sofia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <div class="container-fluid principal">
+
+            <div class="col-lg-2 menu-principal" style="height:100vh">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="">
+                        <a href="#" data-toggle="collapse" data-target="#factura">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>Facturas<span class="pull-right glyphicon glyphicon-chevron-down icono-m-p"></span>
+                        </a>
+                        <ul id="factura" class="nav nav-pills nav-stacked collapse">
+                            <li><a href="#">Nueva Factura</a></li>
+                            <li><a href="#">Lista de Factuas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#inventario"><span class="glyphicon glyphicon-list-alt"></span> Inventario <span class="pull-right glyphicon glyphicon-chevron-down icono-m-p"></span></a>
+                        <ul id="inventario" class="nav nav-pills nav-stacked collapse">
+                            <li><a href="#"> Nueva Item</a></li>
+                            <li><a href="#"> Lista de Items</a></li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#clientes"><span class="glyphicon glyphicon-briefcase"></span> Clientes<span class="pull-right glyphicon glyphicon-chevron-down icono-m-p"></span></a>
+                        <ul id="clientes" class="nav nav-pills nav-stacked collapse">
+                            <li><a href="#">Nueva Item</a></li>
+                            <li><a href="#">Lista de Items</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#proveedores"><span class="glyphicon glyphicon-user"></span> Proveedores<span class="pull-right glyphicon glyphicon glyphicon-chevron-down icono-m-p"></span></a>
+                        <ul id="proveedores" class="nav nav-pills nav-stacked collapse">
+                            <li><a href="#">Nueva Item</a></li>
+                            <li><a href="#">Lista de Items</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-lg-10 no-margin">
+                <div class="container-fluid">
+                    <div class="col-lg-12" style="background-color:lightgray;height:95vh">
+                        @RenderBody()
+                        <hr />
+                        <footer>
+                            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

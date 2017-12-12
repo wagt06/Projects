@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Informacion de Item"
+        android:layout_margin="50dp"
+        android:textSize="30dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Nombre Items"
+        android:layout_margin="10dp"
+        android:id="@+id/Nombre" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Descripcion"
+        android:layout_margin="10dp"
+        android:id="@+id/Descripcion"
+        android:layout_centerHorizontal="true" />
+    <EditText
+        android:id="@+id/Cantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Cantidad de producto"
+        android:layout_margin="10dp" />
+    <EditText
+        android:id="@+id/Precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Precio"
+        android:layout_margin="10dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Guardar"
+        android:id="@+id/btnGuardar" />
+</LinearLayout>

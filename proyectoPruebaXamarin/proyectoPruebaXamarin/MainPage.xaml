@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:proyectoPruebaXamarin"
+             x:Class="proyectoPruebaXamarin.MainPage">
+   
+    <ScrollView>
+             <StackLayout>
+                    <Label 
+                   x:Name="lblNombre"
+                   Text="Ingresar Producto 23" 
+                   FontSize="25"
+                   VerticalOptions="Fill" 
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"
+                   Margin="20"/>
+
+                    <Entry
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="Nombre Producto"
+         
+                        Margin="10"
+                    ></Entry>
+
+                    <Entry
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+      
+                        Placeholder="Descripcion Producto"
+                        Margin="10"
+                    ></Entry>
+                        <StackLayout Orientation="Horizontal" Margin="30,0,10,0">
+                            <Label
+                            Margin="10"
+                            Text="Activo"
+                            HorizontalOptions="Start"
+                            TextColor="LightGray">
+                            </Label>
+                             <Switch
+                             HorizontalOptions="Start"
+                             ></Switch>
+                         </StackLayout>
+                            <DatePicker
+                                    VerticalOptions="Center"
+
+                                    HorizontalOptions="FillAndExpand"
+                                    Margin="10"
+                                    TextColor="LightGray">
+                            </DatePicker>
+
+
+                            <Button 
+                            Text="Guardar"
+                            BackgroundColor="Green"
+                            Margin="10">
+                            </Button>
+        </StackLayout>
+
+    </ScrollView>
+       
+</ContentPage>

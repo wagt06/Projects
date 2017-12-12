@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-with,initial-scale=1.0,user-scalable =no"/>
+    <link href="Content/bootstrap.css" rel="stylesheet"/>
+    <link href="Content/bootstrap.min.css" rel="stylesheet"/>
+    <link href="Content/Site.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container-fluid ">
+        <div class="row panel-superior" style="padding:10px 0">
+        
+        </div>
+    </div>
+ 
+    <content class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 menu-principal" style="height:90vh">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="">
+                        <a href="#" data-toggle="collapse" data-target="#factura"> 
+                        <span class="glyphicon glyphicon-shopping-cart"></span>Facturas<span class="pull-right glyphicon glyphicon-chevron-down icono-m-p"></span></a>
+                        <ul id="factura" class="nav nav-pills nav-stacked collapse">
+                            <li><a href="#">Nueva Factura</a></li>
+                            <li><a href="#">Lista de Factuas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" data-toggle="collapse" data-target="#inventario"><span class="glyphicon glyphicon-list-alt"></span> Inventario <span class="pull-right glyphicon glyphicon-chevron-down icono-m-p"></span></a>
+                        <ul id="inventario" class="nav nav-pills nav-stacked collapse">
+                            <li><a href="#"> Nueva Item</a></li>
+                            <li><a href="#"> Lista de Items</a></li>
+                        </ul>
+                    
+                    </li>
+                    <li><a href="#"data-toggle="collapse" data-target="#clientes"><span class="glyphicon glyphicon-briefcase"></span> Clientes<span class="pull-right glyphicon glyphicon-chevron-down icono-m-p"></span></a>
+                        <ul id="clientes" class="nav nav-pills nav-stacked collapse">
+                            <li><a href="#">Nueva Item</a></li>
+                            <li><a href="#">Lista de Items</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" data-toggle="collapse" data-target="#proveedores"><span class="glyphicon glyphicon-user"></span> Proveedores<span class="pull-right glyphicon glyphicon glyphicon-chevron-down icono-m-p"></span></a>
+                        <ul id="proveedores" class="nav nav-pills nav-stacked collapse">
+                            <li><a href="#">Nueva Item</a></li>
+                            <li><a href="#">Lista de Items</a></li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+         </div>
+
+            <div class="col col-lg-10" style="background-color:lightgray;height:90vh">
+                <div class="row">
+                    <div class="col-lg-3" style="margin-top:1em">
+                        <div class="list-group indicadores">
+                            <div class="list-group-item" style="height:120px">
+                                <div class="row">
+                                    <div class="col-lg-3 text-center">
+                                        <i class="glyphicon glyphicon-barcode" style="font-size:2.5em"></i>
+                                        <span class="label label-danger">27</span>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <h4 class="list-group-item-heading">Productos Agotados</h4>
+                                        <p class="list-group-item-text">Todos los Items que estan por agotarse</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3" style="margin-top:1em">
+                        <div class="list-group indicadores">
+                            <div class="list-group-item" style="height:110px">
+                                <div class="row">
+                                    <div class="col-lg-3 text-center">
+                                        <i class="glyphicon glyphicon-bookmark" style="font-size:2.5em"></i>
+                                        <span class="label label-success">27</span>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <h4 class="list-group-item-heading">
+                                            Facturas
+                                        </h4>
+                                        <p class="list-group-item-text">Facturas emitidas del Mes</p>
+                                    
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3" style="margin-top:1em">
+                        <div class="list-group indicadores">
+                            <div class="list-group-item" style="height:110px">
+                                <div class="row">
+                                    <div class="col-lg-3 text-center">
+                                        <i class="glyphicon glyphicon-briefcase" style="font-size:2.5em"></i>
+                                        <span class="label label-warning">27</span>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <h4 class="list-group-item-heading">Facturas Vencidas</h4>
+                                        <p class="list-group-item-text">Cuentas x cobrar a Clientes</p>
+                                  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3" style="margin-top:1em; ">
+                        <div class="list-group indicadores">
+                            <div class="list-group-item" style="height:110px">
+                                <div class="row ">
+                                    <div class="col-lg-3 text-center">
+                                        <i class="glyphicon glyphicon-shopping-cart" style="font-size:2.5em"></i>
+                                        <span class="label label-info">27</span>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <h4 class="list-group-item-heading">Pago a Proveedores</h4>
+                                        <p class="list-group-item-text">facturas a pagar a Proveedores</p>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-lg-6">
+                            <canvas class="panel graficos" id="myChart" width="400" height="200" style="padding:1em"></canvas>
+                        </div>
+                        <div class="col-lg-6">
+                            <canvas class="panel graficos" id="myChart2" width="400" height="200" style="padding:1em"></canvas>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </content>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/Chart.js"></script>
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var ctx2 = document.getElementById("myChart2").getContext('2d');
+
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Camaras", "Laptps", "Memorias", "Monitores", "celulares", "Baterias"],
+                datasets: [{
+                    label: 'Categorias de Productos mas Vendidos',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var myChart2 = new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+    </script>
+    
+
+</body>
+</html>
