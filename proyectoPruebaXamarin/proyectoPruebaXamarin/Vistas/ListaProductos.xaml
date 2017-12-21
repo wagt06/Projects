@@ -4,17 +4,26 @@
              x:Class="proyectoPruebaXamarin.Vistas.ListaProductos"
              Title="Lista de Productos">
     <StackLayout>
-      
-        <ListView x:Name="lstPersonas"
-            HasUnevenRows="True" Margin="2">
+        <StackLayout Padding="10" Orientation="Horizontal" BackgroundColor="Gray">
+            <Button Text="+" TextColor="White" BackgroundColor="Green" x:Name="btnNuevo"></Button>
+            <Entry PlaceholderColor="White"  HorizontalOptions="FillAndExpand" Placeholder="Buscar Producto"></Entry>
+            <Button TextColor="White"  Text="Buscar" x:Name="btnBuscar"></Button>
+        </StackLayout>
+        <ListView x:Name="lstPersonas"  ItemsSource="{Binding Producto}" HasUnevenRows="True" Margin="2">
             <ListView.ItemTemplate>
                 <DataTemplate >
                     <ViewCell >
                         <StackLayout Margin="10">
-                            <Label Text="{Binding CodProducto }" TextColor="Gray" FontSize="20"/>
-                            <Label Text="{Binding NombreProducto}" FontSize="18"  TextColor="LightGray"/>
-                            <Label Text="{Binding Descripcion}" TextColor="LightGray"/>
-                            <Label Text="{Binding Fecha}" TextColor="LightGray"/>
+                            <Image></Image>
+                                <Label Text="{Binding Id }" TextColor="Gray" FontSize="10"/>
+                                <Label Text="{Binding Nombre}" FontSize="18"  TextColor="Gray"/>
+                            <Label Text="{Binding Descripcion}" FontSize="12" TextColor="LightGray"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Precio:" TextColor="Gray"/>
+                                <Label Text="{Binding Precio}" TextColor="LightGray"/>
+                                <Label Text="Cantidad" TextColor="Gray"/>
+                                <Label Text="{Binding Cantidad}" TextColor="LightGray"/>
+                            </StackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
